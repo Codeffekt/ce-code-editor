@@ -1,0 +1,44 @@
+<div class="code-editor d-flex flex-column">
+  <div class="code-editor-header d-flex align-items-center">
+    <span class="mat-body-1">{{title}}</span>
+
+    <div class="editor-toolbar">
+      <button mat-icon-button color="primary" (click)="toggleSearch()" matTooltip="Rechercher"
+        *ngIf="config.enableSearch">
+        <mat-icon>search</mat-icon>
+      </button>
+      <ng-container *ngIf="!config.readOnly">
+        <button mat-icon-button [disabled]="!undoable" color="primary" (click)="onUndo()" matTooltip="Annuler"
+          *ngIf="config.enableHistory">
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <button mat-icon-button [disabled]="!redoable" color="primary" (click)="onRedo()" matTooltip="Rétablir"
+          *ngIf="config.enableHistory">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+        <button mat-icon-button [disabled]="!undoable" color="accent" (click)="onSave()" matTooltip="Sauvegarder"
+          *ngIf="config.showSave">
+          <mat-icon>save</mat-icon>
+        </button>
+      </ng-container>
+      <button mat-icon-button *ngIf="!expanded" color="primary" class="ms-auto" (click)="toggleExpansion()"
+        matTooltip="Agrandir">
+        <mat-icon>fullscreen</mat-icon>
+      </button>
+      <button mat-icon-button *ngIf="expanded" color="primary" class="ms-auto" (click)="toggleExpansion()"
+        matTooltip="Réduire">
+        <mat-icon>fullscreen_exit</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div id="size-handle" class="size-handle"></div>
+
+  <ngx-file-drop (onFileDrop)="onFileDropped($event)" dropZoneClassName="ngx-drop-zone"
+    [accept]="config.acceptedDropFileExtensions! | arrayToString">
+    <ng-template ngx-file-drop-content-tmp>
+      <ce-codemirror [(ngModel)]="code" [config]="config" (load)="onCodeMirrorLoaded($event)"
+        (ngModelChange)="onCodeChange()" (focus)="onFocus()">
+      </ce-codemirror>
+    </ng-template>
+  </ngx-file-drop>
+</div>

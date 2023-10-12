@@ -1,0 +1,38 @@
+{
+  "name": "@codeffekt/ce-code-editor",
+  "version": "13.9.0",
+  "author": {
+    "name": "Codeffekt",
+    "email": "contact@codeffekt.com",
+    "url": "https://codeffekt.com"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Angular module providing a code editor",  
+  "peerDependencies": {
+    "@angular/common": "^13.3.1",
+    "@angular/core": "^13.3.1",
+    "@angular/material": "^13.3.2",
+    "@angular/cdk": "^13.3.2",
+    "ngx-file-drop": "^13.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "codemirror": "^5.63.0",
+    "@mdbarr/codemirror-json-lint": "^0.2.0",    
+    "@types/codemirror": "^5.60.5"
+  },
+  "exports": {
+    "./core": {
+      "sass": "./ce-code-editor.scss"
+    }
+  },
+  "module": "./dist/ce-code-editor/fesm2015/codeffekt-ce-code-editor.mjs",
+  "es2020": "./dist/ce-code-editor/fesm2020/codeffekt-ce-code-editor.mjs",
+  "esm2020": "./dist/ce-code-editor/esm2020/codeffekt-ce-code-editor.mjs",
+  "fesm2020": "./dist/ce-code-editor/fesm2020/codeffekt-ce-code-editor.mjs",
+  "fesm2015": "./dist/ce-code-editor/fesm2015/codeffekt-ce-code-editor.mjs",
+  "typings": "./dist/ce-code-editor/codeffekt-ce-code-editor.d.ts"
+}

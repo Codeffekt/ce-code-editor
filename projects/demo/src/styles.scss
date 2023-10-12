@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/indigo-pink.css"; // required while using mat-dialog
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "../../ce-code-editor/ce-code-editor";
+
+html,
+body {
+    height: 100%;
+}
