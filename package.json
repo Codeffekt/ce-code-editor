@@ -25,9 +25,9 @@
     "@angular/router": "^16.2.12",
     "@mdbarr/codemirror-json-lint": "^0.2.0",
     "@popperjs/core": "^2.10.2",
-    "bootstrap": "^5.1.1",
+    "bootstrap": "^5.3.3",
     "codemirror": "^5.63.0",
-    "ngx-file-drop": "^13.0.0",
+    "ngx-file-drop": "^16.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.3"
