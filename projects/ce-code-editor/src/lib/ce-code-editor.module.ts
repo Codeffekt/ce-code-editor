@@ -4,7 +4,6 @@ import { CeCodeEditorComponent } from './code-editor.component';
 import { FormsModule } from '@angular/forms';
 import { CeCodeMirrorComponent } from './code-mirror/code-mirror.component';
 import { MatIconModule } from '@angular/material/icon';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
 import { NgxFileDropModule } from 'ngx-file-drop';
 import { StringArrayToStringPipe } from './array-to-string.pipe';
 @NgModule({
@@ -16,8 +15,7 @@ import { StringArrayToStringPipe } from './array-to-string.pipe';
   imports: [
     CommonModule,
     FormsModule,
-    MatIconModule,
-    MatButtonModule,
+    MatIconModule,    
     NgxFileDropModule
   ],
   exports: [
