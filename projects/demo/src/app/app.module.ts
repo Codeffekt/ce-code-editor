@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatLegacyTabsModule as MatTabsModule } from '@angular/material/legacy-tabs';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -14,8 +14,7 @@ import { MatLegacyTabsModule as MatTabsModule } from '@angular/material/legacy-t
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    CeCodeEditorModule,
-    MatTabsModule
+    CeCodeEditorModule,        
   ],
   providers: [],
   bootstrap: [AppComponent]
