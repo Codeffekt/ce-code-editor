@@ -17,7 +17,7 @@ import { StringArrayToStringPipe } from './array-to-string.pipe';
     CommonModule,
     FormsModule,
     MatIconModule,
-    MatButtonModule,
+    MatButtonModule,    
     NgxFileDropModule
   ],
   exports: [

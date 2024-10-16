@@ -2,10 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CeCodeEditorModule } from '@codeffekt/ce-code-editor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatTabsModule } from '@angular/material/tabs';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 import { MatLegacyTabsModule as MatTabsModule } from '@angular/material/legacy-tabs';
+=======
+
+>>>>>>> 85f16247a6009f523de4091bc8e29593f209e30c
 @NgModule({
   declarations: [
     AppComponent
@@ -14,8 +18,8 @@ import { MatLegacyTabsModule as MatTabsModule } from '@angular/material/legacy-t
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    CeCodeEditorModule,
-    MatTabsModule
+    MatTabsModule,
+    CeCodeEditorModule,        
   ],
   providers: [],
   bootstrap: [AppComponent]
