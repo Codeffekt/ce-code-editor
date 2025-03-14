@@ -19,9 +19,10 @@ const DEFAULT_CODE_EDITOR_CONFIG: CeCodeEditorConfig = {
   gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
 }
 @Component({
-  selector: 'ce-code-editor',
-  templateUrl: './code-editor.component.html',
-  styleUrls: ['./code-editor.component.scss']
+    selector: 'ce-code-editor',
+    templateUrl: './code-editor.component.html',
+    styleUrls: ['./code-editor.component.scss'],
+    standalone: false
 })
 export class CeCodeEditorComponent implements OnInit {
 
