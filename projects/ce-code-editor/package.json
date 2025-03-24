@@ -12,8 +12,8 @@
   },
   "description": "Angular module providing a code editor",  
   "peerDependencies": {
-    "@angular/common": "^19.2.2",
-    "@angular/core": "^19.2.2",
+    "@angular/common": "^19.2.3",
+    "@angular/core": "^19.2.3",
     "@angular/material": "^19.2.3",
     "@angular/cdk": "^19.2.3",
     "ngx-file-drop": "^16.0.0"
