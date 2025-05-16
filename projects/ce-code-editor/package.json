@@ -16,6 +16,8 @@
     "@angular/core": "^19.2.3",
     "@angular/material": "^19.2.3",
     "@angular/cdk": "^19.2.3",
+    "@codeffekt/ce-core": "^19.0.0",
+    "@codeffekt/ce-core-data": "^1.2.3",
     "ngx-file-drop": "^16.0.0"
   },
   "dependencies": {

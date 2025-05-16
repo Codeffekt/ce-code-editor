@@ -24,7 +24,6 @@ import { CeCodeEditorConfig } from '../code-editor-config';
         }
     ],
     templateUrl: './code-mirror.component.html',
-    standalone: false
 })
 export class CeCodeMirrorComponent implements AfterViewInit, OnInit, DoCheck {
 

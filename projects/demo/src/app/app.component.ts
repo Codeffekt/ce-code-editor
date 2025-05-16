@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { CeCodeEditorComponent, CeCodeEditorConfig } from '@codeffekt/ce-code-editor';
+import { FormWrapper } from '@codeffekt/ce-core-data';
 
 @Component({
     selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent {
 
   @ViewChild(CeCodeEditorComponent) codeEditorComponent?: CeCodeEditorComponent;
 
-  code = `{
+  form: FormWrapper = FormWrapper.fromForm({
     "id": "form-all-types",
     "root": "forms-context-final",
     "ctime": 1606726182039,
@@ -21,6 +22,21 @@ export class AppComponent {
     "valid": true,
     "author": "2f21f5d17b1d",
     "content": {
+      "data": {
+        "type": "object",
+        "field": "data",
+        "label": "Data",
+        "value": [
+          {
+            user: "contact@codeffekt.com",
+            login: "contact",
+          },
+          {
+            user: "test",
+            login: "test"
+          }
+        ]        
+      },      
       "pid": {
         "type": "number",
         "field": "pid",
@@ -75,13 +91,14 @@ export class AppComponent {
           "useConverter": true
         }
       }   
-    },
-    "fields": {}
-  }`;
+    }    
+  });
+
+  code = JSON.stringify(this.form.core);
 
   config: CeCodeEditorConfig = {
     preserveContent: true
-  }
+  };
 
   async saveCode(code: any) {
     console.log(code);

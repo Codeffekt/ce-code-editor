@@ -1,7 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, NgZone, OnInit, Output } from '@angular/core';
 import { Editor } from 'codemirror';
-import { NgxFileDropEntry } from 'ngx-file-drop';
+import { NgxFileDropEntry, NgxFileDropModule } from 'ngx-file-drop';
 import { CeCodeEditorConfig } from './code-editor-config';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { StringArrayToStringPipe } from './array-to-string.pipe';
+import { CeCodeMirrorComponent } from './code-mirror/code-mirror.component';
 
 
 const DEFAULT_CODE_EDITOR_CONFIG: CeCodeEditorConfig = {
@@ -19,10 +25,18 @@ const DEFAULT_CODE_EDITOR_CONFIG: CeCodeEditorConfig = {
   gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
 }
 @Component({
-    selector: 'ce-code-editor',
-    templateUrl: './code-editor.component.html',
-    styleUrls: ['./code-editor.component.scss'],
-    standalone: false
+  selector: 'ce-code-editor',
+  templateUrl: './code-editor.component.html',
+  styleUrls: ['./code-editor.component.scss'],
+  imports: [
+    CommonModule,
+    FormsModule,
+    MatIconModule,
+    MatButtonModule,
+    NgxFileDropModule,
+    StringArrayToStringPipe,
+    CeCodeMirrorComponent,
+  ]
 })
 export class CeCodeEditorComponent implements OnInit {
 

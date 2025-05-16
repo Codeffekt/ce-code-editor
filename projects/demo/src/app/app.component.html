@@ -1,5 +1,7 @@
 <div class="m-5">
 
+  <ce-form [formWrapper]="form"></ce-form>
+
   <mat-tab-group [animationDuration]="0">
     <mat-tab label="Tab 1">
       <ce-code-editor (save)="saveCode($event)" [code]="code" title="Démo de l'éditeur" [config]="config"></ce-code-editor>

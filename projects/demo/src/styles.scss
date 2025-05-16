@@ -1,9 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
-@import "@angular/material/prebuilt-themes/indigo-pink.css"; // required while using mat-dialog
+/* @import "@angular/material/prebuilt-themes/indigo-pink.css"; // required while using mat-dialog
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "../../ce-code-editor/ce-code-editor";
 
 html,
 body {
     height: 100%;
+} */
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100vh;
 }
+
+$color-primary: #52857e;
+$color-secondary: #f6b26b;
+$navbar-color: $color-primary;
+$side-menu-icon-color: white;
+$side-menu-color: $color-primary !default; 
+
+@import "../../ce-code-editor/ce-code-editor";
+@import "@codeffekt/ce-core/core";
+

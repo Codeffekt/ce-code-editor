@@ -1,0 +1,1 @@
+export * from './form-object-block.component';

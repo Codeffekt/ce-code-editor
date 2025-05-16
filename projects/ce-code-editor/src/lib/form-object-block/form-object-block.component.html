@@ -1,0 +1,25 @@
+<ce-form-block-field [label]="formBlock.label ?? 'NO LABEL'" headerAppearance="bordered">
+
+    @if(!formBlock.readonly) {
+    <ce-form-block-field-actions class="mb-1">
+        @if(!isEditMode) {
+        <button mat-stroked-button color="primary" (click)="onEditMode()"><mat-icon>link</mat-icon>Editer</button>
+        } @else {
+        <button mat-stroked-button color="primary" (click)="onCancelEdit()"><mat-icon>cancel</mat-icon>Cancel</button>
+        <button mat-stroked-button color="primary" [disabled]="!isCodeValid" (click)="onSave()"><mat-icon>save</mat-icon>Apply</button>
+        }
+    </ce-form-block-field-actions>
+    }
+
+    <ce-form-block-field-content>
+        @if(!isEditMode) {
+        <textarea rows="5" readonly="true">
+            {{formBlock.value | json}}
+        </textarea>
+        } @else {
+        <ce-code-editor [code]="code()" (codeChanges)="onCodeChanges($event)" title="{{formBlock.label}}"
+            [config]="config"></ce-code-editor>
+        }
+    </ce-form-block-field-content>
+
+</ce-form-block-field>
