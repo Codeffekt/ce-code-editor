@@ -1,6 +1,6 @@
 {
   "name": "@codeffekt/ce-code-editor",
-  "version": "19.0.0",
+  "version": "19.1.0",
   "author": {
     "name": "Codeffekt",
     "email": "contact@codeffekt.com",
@@ -16,8 +16,8 @@
     "@angular/core": "^19.2.3",
     "@angular/material": "^19.2.3",
     "@angular/cdk": "^19.2.3",
-    "@codeffekt/ce-core": "^19.0.0",
-    "@codeffekt/ce-core-data": "^1.2.3",
+    "@codeffekt/ce-core": "^19.1.0",
+    "@codeffekt/ce-core-data": "^1.2.6",
     "ngx-file-drop": "^16.0.0"
   },
   "dependencies": {
