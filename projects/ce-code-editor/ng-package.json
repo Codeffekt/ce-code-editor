@@ -9,7 +9,6 @@
   ],
   "allowedNonPeerDependencies": [
     "codemirror",
-    "@mdbarr/codemirror-json-lint",
-    "ngx-file-drop"
+    "@mdbarr/codemirror-json-lint"    
   ]
 }

@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CeFormModule } from '@codeffekt/ce-core';
+import { CeFormComponent } from '@codeffekt/ce-core';
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +15,7 @@ import { CeFormModule } from '@codeffekt/ce-core';
     BrowserAnimationsModule,
     AppRoutingModule,
     MatTabsModule,
-    CeFormModule,
+    CeFormComponent,
     CeCodeEditorModule,
     CeCodeEditorComponent,   
   ],

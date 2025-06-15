@@ -92,9 +92,7 @@ export class AppComponent {
         }
       }   
     }    
-  });
-
-  code = JSON.stringify(this.form.core);
+  });  
 
   config: CeCodeEditorConfig = {
     preserveContent: true

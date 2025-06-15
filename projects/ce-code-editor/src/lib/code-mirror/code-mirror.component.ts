@@ -27,14 +27,14 @@ import { CeCodeEditorConfig } from '../code-editor-config';
 })
 export class CeCodeMirrorComponent implements AfterViewInit, OnInit, DoCheck {
 
-    @Input() config: CeCodeEditorConfig | undefined;
-    @Output() instance: Editor | undefined;
+    @Input() config: CeCodeEditorConfig | undefined;    
     @Output() blur = new EventEmitter();
     @Output() focus = new EventEmitter();
     @Output() change = new EventEmitter();
     @Output() cursorActivity = new EventEmitter();
     @Output() load = new EventEmitter();
     @ViewChild('codeMirror') codeMirrorElt!: ElementRef;
+    private instance: Editor | undefined;
     private _value: any;
 
     private sizeChanged = false;
