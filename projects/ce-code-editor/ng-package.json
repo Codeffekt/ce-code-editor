@@ -4,10 +4,11 @@
   "lib": {
     "entryFile": "src/public-api.ts"
   },
-  "assets": [
-    "./ce-code-editor.scss"
+  "assets": [    
+    "./ce-code-editor.scss"    
   ],
   "allowedNonPeerDependencies": [
+    "@types/codemirror",
     "codemirror",
     "@mdbarr/codemirror-json-lint"    
   ]
