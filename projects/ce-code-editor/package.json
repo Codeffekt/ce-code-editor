@@ -10,20 +10,19 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "Angular module providing a code editor",  
+  "description": "Angular module providing a code editor",
   "peerDependencies": {
     "@angular/common": "^19.2.3",
     "@angular/core": "^19.2.3",
     "@angular/material": "^19.2.3",
     "@angular/cdk": "^19.2.3",
-    "@codeffekt/ce-core": "^19.1.0",
-    "@codeffekt/ce-core-data": "^1.2.6",
-    "ngx-file-drop": "^16.0.0"
+    "@codeffekt/ce-core": "^19.1.1",
+    "@codeffekt/ce-core-data": "^1.2.6"
   },
   "dependencies": {
     "tslib": "^2.3.0",
     "codemirror": "^5.63.0",
-    "@mdbarr/codemirror-json-lint": "^0.2.0",    
+    "@mdbarr/codemirror-json-lint": "^0.2.0",
     "@types/codemirror": "^5.60.5"
   },
   "exports": {

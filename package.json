@@ -25,12 +25,11 @@
     "@angular/router": "^19.2.3",
     "@mdbarr/codemirror-json-lint": "^0.2.0",
     "@popperjs/core": "^2.10.2",
-    "@codeffekt/ce-core": "^19.1.0",
+    "@codeffekt/ce-core": "^19.1.1",
     "@codeffekt/ce-core-data": "^1.2.6",
     "bootstrap": "^5.3.3",
     "codemirror": "^5.63.0",
     "@types/codemirror": "^5.60.5",
-    "ngx-file-drop": "^16.0.0",
     "rxjs": "^7.8.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
