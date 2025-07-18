@@ -4,6 +4,9 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
+      "@codeffekt/ce-core": [
+        "../../packages/ce-core/projects/lib/src/lib/index.ts"
+      ],
       "ce-code-editor": [
         "dist/ce-code-editor/ce-code-editor",
         "dist/ce-code-editor"
