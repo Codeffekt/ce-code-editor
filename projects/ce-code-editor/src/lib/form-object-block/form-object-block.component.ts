@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CeFormBlocksModule, FormBlockComponent } from '@codeffekt/ce-core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { CeCodeEditorComponent } from '../code-editor.component';
+import { CeCodeEditorComponent } from '../code-editor/code-editor.component';
 import { CeCodeEditorConfig } from '../code-editor-config';
 
 @Component({

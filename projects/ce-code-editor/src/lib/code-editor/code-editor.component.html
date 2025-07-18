@@ -1,0 +1,5 @@
+<div class="code-editor d-flex flex-column">
+  <ce-code-editor-header [title]="title" (save)="onSave($event)"></ce-code-editor-header>  
+  <div id="size-handle" class="size-handle"></div>
+  <ce-code-editor-content [code]="code" [config]="config" (codeChanges)="onCodeChange($event)"></ce-code-editor-content>
+</div>

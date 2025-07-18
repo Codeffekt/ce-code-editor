@@ -1,0 +1,21 @@
+:host {
+ 
+    ce-code-editor-content {
+        display: block;
+        height: 60vh;
+    }
+
+}
+
+:host:fullscreen {
+    background-color: white;
+
+    ce-code-editor-content {
+        display: block;
+        height: 100%;
+    }
+
+    .mat-mdc-dialog-content {
+        max-height: 80%;
+    }
+}

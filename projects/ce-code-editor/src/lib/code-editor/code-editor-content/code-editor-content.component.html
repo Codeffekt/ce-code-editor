@@ -1,0 +1,13 @@
+<!-- <ngx-file-drop (onFileDrop)="onFileDropped($event)" dropZoneClassName="ngx-drop-zone"
+    [accept]="acceptedDropFileExtensions() | arrayToString">
+    <ng-template ngx-file-drop-content-tmp>
+      <ce-codemirror [(ngModel)]="code" [config]="editorConfig()" (load)="onCodeMirrorLoaded($event)"
+        (ngModelChange)="onCodeChange($event)" (focus)="onFocus()">
+      </ce-codemirror>
+    </ng-template>
+  </ngx-file-drop> -->
+
+
+<ce-codemirror [(ngModel)]="code" [config]="editorConfig()" (load)="onCodeMirrorLoaded($event)"
+  (ngModelChange)="onCodeChange($event)" (focus)="onFocus()">
+</ce-codemirror>

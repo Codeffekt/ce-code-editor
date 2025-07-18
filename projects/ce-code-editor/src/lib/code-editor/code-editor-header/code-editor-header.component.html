@@ -1,0 +1,39 @@
+<mat-toolbar>
+
+<span class="mat-body-1">{{title()}}</span>
+
+@if(enableSearch()) {
+<button mat-icon-button color="primary" (click)="toggleSearch()" matTooltip="Rechercher">
+    <mat-icon>search</mat-icon>
+</button>
+}
+
+@if(!readOnly()) {
+@if(enableHistory()) {
+<button mat-icon-button [disabled]="!undoable()" color="primary" (click)="onUndo()" matTooltip="Annuler">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+</button>
+<button mat-icon-button [disabled]="!redoable()" color="primary" (click)="onRedo()" matTooltip="Rétablir">
+    <mat-icon>keyboard_arrow_right</mat-icon>
+</button>
+}
+
+@if(showSave()) {
+<button mat-icon-button [disabled]="!undoable() || !isCodeValid()" color="accent" (click)="onSave()"
+    matTooltip="Sauvegarder">
+    <mat-icon>save</mat-icon>
+</button>
+}
+}
+
+@if(expanded()) {
+<button mat-icon-button color="primary" class="ms-auto" (click)="toggleExpansion()" matTooltip="Agrandir">
+    <mat-icon>fullscreen</mat-icon>
+</button>
+} @else {
+<button mat-icon-button color="primary" class="ms-auto" (click)="toggleExpansion()" matTooltip="Réduire">
+    <mat-icon>fullscreen_exit</mat-icon>
+</button>
+}
+
+</mat-toolbar>

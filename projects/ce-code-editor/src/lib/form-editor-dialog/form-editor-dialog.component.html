@@ -1,0 +1,12 @@
+@if(dialogOpened()) {
+<ce-code-editor-header title="Éditeur de formulaire"></ce-code-editor-header>
+
+<mat-dialog-content>
+    <ce-code-editor-content [code]="data.form | json" [config]="{ showSave: false }"></ce-code-editor-content>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Fermer</button>
+    <button mat-raised-button (click)="onSave()" [disabled]="!isCodeValid()">Valider</button>
+</mat-dialog-actions>
+}

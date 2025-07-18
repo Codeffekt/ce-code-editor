@@ -6,6 +6,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CeFormComponent } from '@codeffekt/ce-core';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent
@@ -15,6 +16,7 @@ import { CeFormComponent } from '@codeffekt/ce-core';
     BrowserAnimationsModule,
     AppRoutingModule,
     MatTabsModule,
+    MatButtonModule,
     CeFormComponent,
     CeCodeEditorModule,
     CeCodeEditorComponent,   

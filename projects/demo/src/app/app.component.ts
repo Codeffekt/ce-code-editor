@@ -1,6 +1,8 @@
-import { Component, ViewChild } from '@angular/core';
-import { CeCodeEditorComponent, CeCodeEditorConfig } from '@codeffekt/ce-code-editor';
+import { Component, inject, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { CeCodeEditorComponent, CeCodeEditorConfig, FormEditorDialogComponent } from '@codeffekt/ce-code-editor';
 import { FormWrapper } from '@codeffekt/ce-core-data';
+import { filter } from 'rxjs';
 
 @Component({
     selector: 'app-root',
@@ -98,7 +100,23 @@ export class AppComponent {
     preserveContent: true
   };
 
+  private dialog = inject(MatDialog);
+
   async saveCode(code: any) {
     console.log(code);
+  }
+
+  openJSONEditor() {
+
+    const ref = this.dialog.open(
+      FormEditorDialogComponent,
+      { data: { form: this.form } }
+    );
+
+    ref.afterClosed()
+      .pipe(
+        filter(form => !!form)
+      )
+      .subscribe(form => this.form = form);
   }
 }
