@@ -50,7 +50,7 @@ export class CeCodeMirrorComponent implements AfterViewInit, OnInit, DoCheck {
 
     get value() { return this._value; }
 
-    @Input() set value(v) {
+    @Input() set value(v) {        
         if (v !== this._value) {
             this._value = v;
             this.onChange(v);

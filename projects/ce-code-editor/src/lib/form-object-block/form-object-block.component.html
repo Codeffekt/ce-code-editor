@@ -12,12 +12,11 @@
     }
 
     <ce-form-block-field-content>
-        @if(!isEditMode) {
-        <textarea rows="5" readonly="true">
-            {{formBlock.value | json}}
-        </textarea>
+        @if(!isEditMode || formBlock.readonly) {
+        <ce-code-editor [readonly]="true" [code]="code() | json" title="{{formBlock.label}}"
+            [config]="configReadonly"></ce-code-editor>
         } @else {
-        <ce-code-editor [code]="code()" (codeChanges)="onCodeChanges($event)" title="{{formBlock.label}}"
+        <ce-code-editor [code]="code() | json" (codeChanges)="onCodeChanges($event)" title="{{formBlock.label}}"
             [config]="config"></ce-code-editor>
         }
     </ce-form-block-field-content>

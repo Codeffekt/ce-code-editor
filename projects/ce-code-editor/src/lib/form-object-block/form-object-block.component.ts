@@ -24,13 +24,18 @@ export class FormObjectBlockComponent extends FormBlockComponent<FormBlockObject
   isEditMode = true;
   isCodeValid = true;
 
-  code = signal("");
+  code = signal({});
 
   config: CeCodeEditorConfig = {
     preserveContent: true,
     showSave: false,
   };
-  
+
+  configReadonly: CeCodeEditorConfig = {
+    ...this.config,
+    readOnly: true
+  };
+
   onEditMode() {
     this.isEditMode = true;
   }
@@ -40,28 +45,28 @@ export class FormObjectBlockComponent extends FormBlockComponent<FormBlockObject
     this.formBlockChanged();
   }
 
-  onSave() {    
+  onSave() {
     try {
-      const parsedCode = JSON.parse(this.code());
+      const parsedCode = JSON.parse(JSON.stringify(this.code()));
       this.patchValue(parsedCode);
       this.isCodeValid = true;
       this.isEditMode = false;
     } catch {
       this.isCodeValid = false;
     }
-  }  
+  }
 
   onCodeChanges(code: string) {
     try {
       const parsedCode = JSON.parse(code);
-      this.code.set(code);
+      this.code.set(parsedCode);
       this.isCodeValid = true;
     } catch {
       this.isCodeValid = false;
     }
   }
 
-  formBlockChanged(): void {
-      this.code.set(JSON.stringify(this.formBlock.value ?? ""));
+  formBlockChanged(): void {    
+    this.code.set(this.formBlock.value ?? {});
   }
 }

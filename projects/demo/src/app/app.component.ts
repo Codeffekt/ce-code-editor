@@ -28,16 +28,7 @@ export class AppComponent {
         "type": "object",
         "field": "data",
         "label": "Data",
-        "value": [
-          {
-            user: "contact@codeffekt.com",
-            login: "contact",
-          },
-          {
-            user: "test",
-            login: "test"
-          }
-        ]        
+        "value": undefined,        
       },      
       "pid": {
         "type": "number",
@@ -95,6 +86,8 @@ export class AppComponent {
       }   
     }    
   });  
+
+  testUndefined = undefined;
 
   config: CeCodeEditorConfig = {
     preserveContent: true

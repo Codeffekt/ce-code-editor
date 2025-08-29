@@ -23,6 +23,7 @@ export class CeCodeEditorComponent {
   @Input() code = "";
   @Input() title: string | undefined;
   @Input() expanded = false;
+  @Input() readonly = false;
   @Output() codeChanges = new EventEmitter();
   @Output() save = new EventEmitter();
   @Input() config!: CeCodeEditorConfig; 
