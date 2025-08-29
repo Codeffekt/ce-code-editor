@@ -1,5 +1,8 @@
 # CeCodeEditor Changelog
 
+## [19.1.3]
+ - Fix: correctly update the block value
+
 ## [19.1.2]
  - Fix : JSON parser
  - Feat : use codemirror readonly mode when block is readonly

@@ -48,7 +48,7 @@ export class FormObjectBlockComponent extends FormBlockComponent<FormBlockObject
   onSave() {
     try {
       const parsedCode = JSON.parse(JSON.stringify(this.code()));
-      this.patchValue(parsedCode);
+      this.value = parsedCode;
       this.isCodeValid = true;
       this.isEditMode = false;
     } catch {
