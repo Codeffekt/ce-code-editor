@@ -2,7 +2,9 @@
 
   <button mat-button (click)="openJSONEditor()">Open dialog</button>
 
-  <ce-form [formWrapper]="form"></ce-form>
+  <p>Last modification date and time => {{lastModificationTimestamp}}</p>
+
+  <ce-form [formWrapper]="form" (formChanges)="onFormChanges($event)"></ce-form>  
 
   <mat-tab-group [animationDuration]="0">
     <mat-tab label="Tab 1">

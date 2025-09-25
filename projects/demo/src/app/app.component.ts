@@ -93,6 +93,8 @@ export class AppComponent {
     preserveContent: true
   };
 
+  lastModificationTimestamp = "";
+
   private dialog = inject(MatDialog);
 
   async saveCode(code: any) {
@@ -111,5 +113,9 @@ export class AppComponent {
         filter(form => !!form)
       )
       .subscribe(form => this.form = form);
+  }
+
+  onFormChanges(updatedForm: FormWrapper) {    
+    this.lastModificationTimestamp = new Date(updatedForm.core.mtime ?? updatedForm.core.ctime).toLocaleString();
   }
 }
